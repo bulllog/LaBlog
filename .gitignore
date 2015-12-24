@@ -55,3 +55,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Datastore
+.DS_Store
+LaBlog/.DS_Store
