@@ -394,4 +394,25 @@ body {
   webkit-tap-highlight-color: #0085a1;
 }
 
+/* Create post button. */
+.create_post {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
 
+.post-preview {
+  margin: 0 10%;
+}
+
+.card {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+}
