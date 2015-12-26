@@ -12,6 +12,21 @@ var lablogCtrl = function($scope, $mdDialog) {
   this.scope_.setHeader = angular.bind(this, this.setHeader);
   this.scope_.setSubHeader = angular.bind(this, this.setSubHeader);
   this.scope_.setBackground = angular.bind(this, this.setBackground);
+
+  $scope.openDialogCreateTicket = function($event, ticket) {
+  $mdDialog.show({
+      controller: createTicketDialogCtrl,
+      templateUrl: '/assets/javascript/directives/create_ticket_dialog/create-ticket-dialog.ng',
+      targetEvent: $event,
+      locals: {
+        ticket: ticket
+      }
+    })
+    .then(function(answer) {
+      $scope.alert = 'You said the information was "' + answer + '".';
+    });
+  };  
+
 };
 
 /** Name used by Angular JS dependency injector. */

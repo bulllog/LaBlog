@@ -1,16 +1,24 @@
-<div class="card">
-  <div class="post-preview">
-      <a href="post.html">
-          <h2 class="post-title">
-            {$ post.header $}
-            <!--Science has not yet mastered prophecy-->
-          </h2>
-          <h3 class="post-subtitle">
-            {$ post.subHeader $}
-            <!--We predict too much for the next year and yet far too little for the next ten.-->
-          </h3>
-      </a>
-      <p class="post-meta">Posted by <a href="#">{$ post.postedBy $}</a> on {$
-      post.publishedOn $}</p>
-  </div>
+<div>
+  <a href="post">
+    <div class="card">
+      <div class="post-preview">
+        <span ng-show="post.status== 'published'" class="status_label">
+          <span class="label label-info">Published</span>
+        </span>
+        <span ng-show="post.status== 'draft'" class="status_label">
+          <span class="label label-primary">Draft</span>
+        </span>
+        <h2 class="post-title">
+          {$ post.header $}
+          <!--Science has not yet mastered prophecy-->
+        </h2>
+        <h3 class="post-subtitle">
+          {$ post.subHeader $}
+          <!--We predict too much for the next year and yet far too little for the next ten.-->
+        </h3>
+        <p class="post-meta">Posted by <a href="#">{$ post.postedBy $}</a> on {$
+        post.publishedOn $}</p>
+      </div>
+    </div>
+  </a>
 </div>
