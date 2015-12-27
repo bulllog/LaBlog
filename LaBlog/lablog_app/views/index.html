@@ -25,6 +25,7 @@
 
     <!-- Java Script-->
     <script src="static/js/constants.js"></script>
+    <script src="static/js/dialog/create-post/create_post_dialog.js"></script>
     <script src="static/js/directives/post-tile/post_tile.js"></script>
     <script src="static/js/controllers/user_ctrl.js"></script>
     <script src="static/js/controllers/post_ctrl.js"></script>
@@ -43,11 +44,14 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="static/styles/bootstrap_material.css" rel="stylesheet">
-    
+
+    <!-- Custom CSS -->
+    <link href="static/styles/angular_material.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="static/styles/lablog.css" rel="stylesheet">
 
-    
+
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -157,7 +161,9 @@
     </footer>
 
     <div class="create_post">
-      <button type="button" class="btn btn-circle btn-raised ripple-effect btn-primary">
+      <button type="button" class="btn btn-circle btn-raised ripple-effect btn-primary"
+          ng-click="openDialogCreatePost($event)"
+          aria-label="create-new-ticket">
         <span class="glyphicon glyphicon-plus"></span>
       </button>
     </div>

@@ -12,7 +12,7 @@ var lablogApp = angular.module('lablogApp', [
 /**
  * Controller list.
  */
-var ControllerList = [lablogCtrl, homeCtrl, aboutCtrl, contactCtrl, postCtrl, userCtrl];
+var ControllerList = [lablogCtrl, homeCtrl, aboutCtrl, contactCtrl, postCtrl, userCtrl, createPostDialogCtrl];
 
 
 /**
@@ -68,4 +68,5 @@ lablogApp.ngConfigure = function($locationProvider, $routeProvider,
 
 
 lablogApp.config(lablogApp.ngConfigure);
+
 
