@@ -12,7 +12,7 @@ var lablogApp = angular.module('lablogApp', [
 /**
  * Controller list.
  */
-var ControllerList = [lablogCtrl, homeCtrl, aboutCtrl, contactCtrl];
+var ControllerList = [lablogCtrl, homeCtrl, aboutCtrl, contactCtrl, postCtrl, userCtrl, createPostDialogCtrl];
 
 
 /**
@@ -51,6 +51,12 @@ lablogApp.ngConfigure = function($locationProvider, $routeProvider,
   }).when('/contact_us', {
     'controller': contactCtrl,
     'templateUrl': 'static/templates/contact_us.ng'
+  }).when('/post', {
+    'controller': postCtrl,
+    'templateUrl': 'static/templates/post_page.ng'
+  }).when('/user', {
+    'controller': userCtrl,
+    'templateUrl': 'static/templates/home.ng'
   });
 
   // Change the Angular JS native notation of {{ }} because it conflict with
@@ -62,4 +68,5 @@ lablogApp.ngConfigure = function($locationProvider, $routeProvider,
 
 
 lablogApp.config(lablogApp.ngConfigure);
+
 

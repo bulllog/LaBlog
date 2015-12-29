@@ -18,64 +18,86 @@ Constants.home = {
 Constants.about = {
   "header" : "About This",
   "subHeader" : "This is what its all about",
-  "background" : "about-bg.jpg"
+  "background" : "about-bg.jpg",
+  "status": "draft"
 }
 
 Constants.contact = {
   "header" : "Contact Us",
   "subHeader" : "Have questions? We have answers(may be).",
-  "background" : "contact-bg.jpg"
+  "background" : "contact-bg.jpg",
+  "status": "published"
 }
 
 
 Constants.posts = [ {
-  "header": "Man must explore, and this is exploration at its greatest",
+  "header": "Man must explore, and this is exploration",
   "subHeader" : "Problems look mighty small from 150 miles up",
   "postedBy" : "David Den",
-  "publishedOn" : "September 24, 2015"
+  "publishedOn" : "September 24, 2015",
+  "background": "post-bg.jpg",
+  "status": "draft"
 }, {
   "header": "Man must explore, and this is exploration at its greatest",
   "subHeader" : "Problems look mighty small from 150 miles up",
   "postedBy" : "David Den",
-  "publishedOn" : "September 24, 2015"
+  "publishedOn" : "September 24, 2015",
+  "background": "post-bg.jpg",
+  "status": "draft"
 }, {
   "header": "Man must explore, and this is exploration at its greatest",
   "subHeader" : "Problems look mighty small from 150 miles up",
   "postedBy" : "David Den",
-  "publishedOn" : "September 24, 2015"
+  "publishedOn" : "September 24, 2015",
+  "background": "post-bg.jpg",
+  "status": "published"
 }, {
   "header": "Man must explore, and this is exploration at its greatest",
   "subHeader" : "Problems look mighty small from 150 miles up",
   "postedBy" : "David Den",
-  "publishedOn" : "September 24, 2015"
+  "publishedOn" : "September 24, 2015",
+  "background": "post-bg.jpg",
+  "status": "draft"
 }, {
   "header": "Man must explore, and this is exploration at its greatest",
   "subHeader" : "Problems look mighty small from 150 miles up",
   "postedBy" : "David Den",
-  "publishedOn" : "September 24, 2015"
+  "publishedOn" : "September 24, 2015",
+  "background": "post-bg.jpg",
+  "status": "published"
 }, {
   "header": "Man must explore, and this is exploration at its greatest",
   "subHeader" : "Problems look mighty small from 150 miles up",
   "postedBy" : "David Den",
-  "publishedOn" : "September 24, 2015"
+  "publishedOn" : "September 24, 2015",
+  "background": "post-bg.jpg",
+  "status": "draft"
 }, {
   "header": "Man must explore, and this is exploration at its greatest",
   "subHeader" : "Problems look mighty small from 150 miles up",
   "postedBy" : "David Den",
-  "publishedOn" : "September 24, 2015"
+  "publishedOn" : "September 24, 2015",
+  "background": "post-bg.jpg",
+  "status": "draft"
 }, {
   "header": "Man must explore, and this is exploration at its greatest",
   "subHeader" : "Problems look mighty small from 150 miles up",
   "postedBy" : "David Den",
-  "publishedOn" : "September 24, 2015"
+  "publishedOn" : "September 24, 2015",
+  "background": "post-bg.jpg",
+  "status": "published"
 }, {
   "header": "Man must explore, and this is exploration at its greatest",
   "subHeader" : "Problems look mighty small from 150 miles up",
   "postedBy" : "David Den",
-  "publishedOn" : "September 24, 2015"
+  "publishedOn" : "September 24, 2015",
+  "background": "post-bg.jpg",
+  "status": "draft"
 }, {
   "header": "Man must explore, and this is exploration at its greatest",
   "subHeader" : "Problems look mighty small from 150 miles up",
   "postedBy" : "David Den",
-  "publishedOn" : "September 24, 2015"
+  "publishedOn" : "September 24, 2015",
+  "background": "post-bg.jpg",
+  "status": "published"
 }];

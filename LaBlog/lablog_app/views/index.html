@@ -25,7 +25,10 @@
 
     <!-- Java Script-->
     <script src="static/js/constants.js"></script>
+    <script src="static/js/dialog/create-post/create_post_dialog.js"></script>
     <script src="static/js/directives/post-tile/post_tile.js"></script>
+    <script src="static/js/controllers/user_ctrl.js"></script>
+    <script src="static/js/controllers/post_ctrl.js"></script>
     <script src="static/js/controllers/contact_ctrl.js"></script>
     <script src="static/js/controllers/about_ctrl.js"></script>
     <script src="static/js/controllers/home_ctrl.js"></script>
@@ -41,11 +44,14 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="static/styles/bootstrap_material.css" rel="stylesheet">
-    
+
+    <!-- Custom CSS -->
+    <link href="static/styles/angular_material.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="static/styles/lablog.css" rel="stylesheet">
 
-    
+
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -86,7 +92,7 @@
                         <a href="about_us">About</a>
                     </li>
                     <li>
-                        <a href="post.html">Sample Post</a>
+                        <a href="user">Pankaj Kumar</a>
                     </li>
                     <li>
                         <a href="contact_us">Contact</a>
@@ -101,82 +107,21 @@
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header" style="background-image: url('static/img/{$background$}')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                      <h1>{$header$}</h1>
-                        <hr class="small">
-                        <span class="subheading">{$subHeader$}</span>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="site-heading">
+              <h1 class="title">{$header$}</h1>
+              <hr class="small">
+              <span class="subheading">{$subHeader$}</span>
             </div>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Ng-View -->
     <div ng-view></div>
-
-    <!-- Main Content -->
-    <!--<div class="container">-->
-        <!--<div class="row">-->
-            <!--<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">-->
-                <!--<div class="post-preview">-->
-                    <!--<a href="post.html">-->
-                        <!--<h2 class="post-title">-->
-                            <!--Man must explore, and this is exploration at its greatest-->
-                        <!--</h2>-->
-                        <!--<h3 class="post-subtitle">-->
-                            <!--Problems look mighty small from 150 miles up-->
-                        <!--</h3>-->
-                    <!--</a>-->
-                    <!--<p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>-->
-                <!--</div>-->
-                <!--<hr>-->
-                <!--<div class="post-preview">-->
-                    <!--<a href="post.html">-->
-                        <!--<h2 class="post-title">-->
-                            <!--I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.-->
-                        <!--</h2>-->
-                    <!--</a>-->
-                    <!--<p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>-->
-                <!--</div>-->
-                <!--<hr>-->
-                <!--<div class="post-preview">-->
-                    <!--<a href="post.html">-->
-                        <!--<h2 class="post-title">-->
-                            <!--Science has not yet mastered prophecy-->
-                        <!--</h2>-->
-                        <!--<h3 class="post-subtitle">-->
-                            <!--We predict too much for the next year and yet far too little for the next ten.-->
-                        <!--</h3>-->
-                    <!--</a>-->
-                    <!--<p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>-->
-                <!--</div>-->
-                <!--<hr>-->
-                <!--<div class="post-preview">-->
-                    <!--<a href="post.html">-->
-                        <!--<h2 class="post-title">-->
-                            <!--Failure is not an option-->
-                        <!--</h2>-->
-                        <!--<h3 class="post-subtitle">-->
-                            <!--Many say exploration is part of our destiny, but it’s actually our duty to future generations.-->
-                        <!--</h3>-->
-                    <!--</a>-->
-                    <!--<p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>-->
-                <!--</div>-->
-                <!--<hr>-->
-                <!--[> Pager <]-->
-                <!--<ul class="pager">-->
-                    <!--<li class="next">-->
-                        <!--<a href="#">Older Posts &rarr;</a>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<hr>-->
 
     <!-- Footer -->
     <footer>
@@ -216,19 +161,12 @@
     </footer>
 
     <div class="create_post">
-      <button type="button" class="btn btn-circle btn-raised ripple-effect btn-primary">
+      <button type="button" class="btn btn-circle btn-raised ripple-effect btn-primary"
+          ng-click="openDialogCreatePost($event)"
+          aria-label="create-new-ticket">
         <span class="glyphicon glyphicon-plus"></span>
       </button>
     </div>
-
-    <!--[> jQuery <]-->
-    <!--<script src="js/jquery.js"></script>-->
-
-    <!--[> Bootstrap Core JavaScript <]-->
-    <!--<script src="js/bootstrap.min.js"></script>-->
-
-    <!--[> Custom Theme JavaScript <]-->
-    <!--<script src="js/clean-blog.min.js"></script>-->
 
 </body>
 

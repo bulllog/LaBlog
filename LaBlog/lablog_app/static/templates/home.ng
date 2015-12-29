@@ -5,7 +5,7 @@
               <post-tile post="post"></post-tile>
             </div>
             <hr>
-            
+
             <!-- Pager -->
             <ul class="pager">
                 <li class="next">
