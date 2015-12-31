@@ -6,6 +6,6 @@ from lablog_app import apis
 
 urlpatterns = [
     url(r'^blog', apis.Blogs.as_view(), name='Blogs'),
-    #url(r'^.*$', views.index, name='index'),
+    url(r'^.*$', views.index, name='index'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
