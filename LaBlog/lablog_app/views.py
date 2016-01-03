@@ -1,44 +1,42 @@
-from django.shortcuts import render
-from django.template import loader
-from django.http import HttpResponse
+from django.template.response import TemplateResponse
+from django.http import JsonResponse
+from django.views.generic import View
 
 from apis import Auth
-# Create your views here.
 
+import json
 
-class Application:
+class Views(View):
   auth = Auth()
+
   def get(self, request):
     auth_token = request.COOKIES.get("auth_token", None)
     context = {}
-    if not auth_token:
-      template = loader.get_template('login.html')
-    else:
-      user_obj = auth.get_user(auth_token)
-      if not user_obj:
-        template = loader.get_template('login.html')
-      user_obj = auth.auth_user(auth_token)
-      context = {"auth_token": token, "user_obj": user_obj}
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render(), context)
+    template = 'login.html'
+    if auth_token:
+      user_obj = self.auth.auth_user(auth_token)
+      if user_obj:
+        context = {"user_obj": user_obj}
+        template = 'index.html'
+      else:
+        context = {"status": "Error",
+                   "error_message": "user name or password not exist"}
 
+    return TemplateResponse(request, template, context).render()
 
   def post(self, request):
     request_json = json.loads(request.body)
-    user_name = request.get("user_name", None)
-    password = request.get("password", None)
+    user_name = request_json.get("user_name", None)
+    password = request_json.get("password", None)
     context = {}
-    if not user_name and not pwd:
-      template = loader.get_template('login.html')
-    else:
-      auth_token = auth.get_token(user, password)
+    template = 'login.html'
+
+    if user_name and password:
+      auth_token = self.auth.get_token(user_name, password)
       if not auth_token:
-        context = {"status": "Error", "error_message": "user name or password not exist"}
-
+        context = {"status": "Error",
+                   "error_message": "user name or password not exist"}
       else:
-        user_obj = auth.auth_user(auth_token)
-        context = {"auth_token": auth_token, "user_obj": user_obj}
-        template = loader.get_template('index.html')
+        context = {"auth_token": auth_token}
 
-    return HttpResponse(template.render(), context)
-
+    return JsonResponse(context)

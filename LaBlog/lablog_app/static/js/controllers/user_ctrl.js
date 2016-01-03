@@ -6,15 +6,11 @@ var userCtrl = function($scope, $mdDialog) {
 
   this.scope_.posts = null;
 
-  this.user = {
-    "name": "Pankaj Kumar",
-    "about": "I am just another guy.",
-    "background": "user-bg.jpg"
-  };
+  this.user = this.scope_.$parent.getUser();
   // Set header, sub header and background.
-  this.scope_.$parent.setHeader(this.user.name);
-  this.scope_.$parent.setSubHeader(this.user.about);
-  this.scope_.$parent.setBackground(this.user.background);
+  this.scope_.$parent.setHeader(this.user.fields.name);
+  this.scope_.$parent.setSubHeader(this.user.fields.about);
+  this.scope_.$parent.setBackground(this.user.fields.background_image);
 
   // Load posts.
   this.loadPosts();

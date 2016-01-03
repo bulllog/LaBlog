@@ -463,3 +463,8 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.117647) !important;
   margin-top: 25px;
 }
+
+.modal-footer {
+   border-top: 0px !important;
+}
+

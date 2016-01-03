@@ -13,7 +13,16 @@ var lablogCtrl = function($scope, $mdDialog) {
   this.scope_.setSubHeader = angular.bind(this, this.setSubHeader);
   this.scope_.setBackground = angular.bind(this, this.setBackground);
 
-  $scope.openDialogCreatePost = function($event, post) {
+
+  this.scope_.setUser = function(user) {
+    $scope.user = user;
+  }
+
+  this.scope_.getUser = function() {
+    return this.user;
+  }
+
+  this.scope_.openDialogCreatePost = function($event, post) {
     $mdDialog.show({
         controller: createPostDialogCtrl,
         templateUrl: 'static/js/dialog/create-post/create_post_dialog.ng',

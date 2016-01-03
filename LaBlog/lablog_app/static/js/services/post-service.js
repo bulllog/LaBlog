@@ -3,13 +3,11 @@
  */
 var postService = function($resource) {
 
-  this.PostApi_ = $resource(
-      '/api/post/:post_id', {
-          post_id: '@post_id'
+  this.PostsApi_ = $resource(
+      '/api/post/:user_name', {
+          user_name: '@user_name'
         }, {
-          'create': {method: 'Post'},
-          'get': {method: 'Get'},
-          'update': {method: 'Put'}});
+          'get': {method: 'Get'}});
 };
 
 /**
@@ -26,16 +24,16 @@ postService.NG_MODULE = angular.module(postService.NG_NAME,
     [postService.NG_NAME]).
     directive(postService.NG_NAME, postService);
 
-    
+
 /**
  * Gets tickets of the given status if status is given,
  * all tickets otherwise.
  */
 postService.prototype.getPosts = function(successCallback,
-    opt_ticketStatus) {
-  var ticketStatus = angular.isDefined(opt_ticketStatus) ?
-      opt_ticketStatus : '';
-  this.PostApi_.getTickets({status: ticketStatus}, successCallback);
+    opt_user_name) {
+  var name = angular.isDefined(opt_user_name) ?
+      opt_user_name : null;
+  this.PostApi_.get({user_name: name}, successCallback);
 };
 
 
